@@ -4,10 +4,17 @@ pipeline {
 
     stages {
 
-        stage("build") {
-
+        stage("Build") {
             steps {
-                echo 'building project....'
+                echo 'Building project....'
+                bash '/usr/local/sbtDownload/sbt/bin/sbt compile'
+            }
+        }
+
+        stage("Test") {
+            steps {
+                echo 'Testing project....'
+                bash '/usr/local/sbtDownload/sbt/bin/sbt test'
             }
         }
     }
