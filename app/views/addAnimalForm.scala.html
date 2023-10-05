@@ -1,0 +1,9 @@
+@import model.Animal
+
+@(newAnimalForm: Form[Animal])(implicit messagesProvider: MessagesProvider)
+
+@helper.form(action = routes.HomeController.processForm) {
+    @helper.inputText(newAnimalForm("legs"))
+    @helper.inputText(newAnimalForm("sound"))
+    <input type = "submit" value="Submit">
+}
