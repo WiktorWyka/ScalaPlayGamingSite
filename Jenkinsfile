@@ -7,14 +7,14 @@ pipeline {
         stage("Build") {
             steps {
                 echo 'Building project....'
-                bash '/usr/local/sbtDownload/sbt/bin/sbt compile'
+                '/usr/local/sbtDownload/sbt/bin/sbt compile'
             }
         }
 
         stage("Test") {
             steps {
                 echo 'Testing project....'
-                bash '/usr/local/sbtDownload/sbt/bin/sbt test'
+                '/usr/local/sbtDownload/sbt/bin/sbt test'
             }
         }
     }
