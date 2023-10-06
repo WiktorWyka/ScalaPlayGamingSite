@@ -36,7 +36,6 @@ target
 conf/logback.xml
 conf/messages
 project/metals.sbt
-project/plugins.sbt
 project/.bloop/bloop.settings.json
 project/.bloop/test-scala-play-build.json
 project/project/metals.sbt
